@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  app:
+    build: .
+    ports:
+      - "50000:5000"
+    # volumes:
+    # - ./my-app
+    environment:
+      FLASK_DEBUG: True
+  redis:
+    image: "redis:alpine3.16"
